@@ -40,6 +40,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 2020-7-4   spadino 1.0 ported to inkscape 1.0
 2024-04-21 Frank sauret 1.1 : traduction en français. Modification de la couleur en cas d'undercut. Modification du deddendum pour qu'il fasse 1.25 fois l'addendum.
 2024-06-18 Frank sauret 1.2 : Ajout de la possibilité de choisir la forme du trou (rectangulaire, ronde ou empreinte de servo) et de choisir les dimensions du trou. Ajout de la possibilité de choisir une empreinte pour le trou du servo. Les empreintes sont placées dans le fichier engrenage.ini
+2024-06-22 Frank sauret 1.3 : Ajout de couleurs pour l'ordre de découpe. Séparation en plusieurs objet pour faciliter la retouche et la recolorisation.
 '''
 
 import inkex
@@ -55,7 +56,7 @@ import os
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '1.1'
+__version__ = '1.3'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
