@@ -3,6 +3,8 @@
 Version 2024-06-22.1
 For inkscape V 1.x
 -----
+Gears extension for tracing involute gears and metric pitch gears (belt pulley); allows spokes, center cross, metric module, best evolute shape.
+
 Initially, copy of inkscape-gears-dev (https://github.com/jnweiger/inkscape-gears-dev).
 
 2024-07-20 | 1.4 : Ajout du tracé de poulie au pas métrique. Retouche des explications. Ajout de schémas.
