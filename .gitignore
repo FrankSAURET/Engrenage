@@ -2,3 +2,4 @@
 *.zip
 # Ignore all subdirectories
 */
+pub.png
