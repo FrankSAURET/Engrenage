@@ -24,4 +24,6 @@ Restart inkscape.
 
 The extension will be available under "Extensions > Formes > Engrenage...".
 
+It can be update with **extensions > Mise à jour des extensions de Frank SAURET...** extension.
+
 All code is offered under Licence : GPLV2.
