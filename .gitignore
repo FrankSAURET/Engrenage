@@ -1,4 +1,4 @@
 # Ignore all zip files
 *.zip
-
+Ressources/*
 pub.png
