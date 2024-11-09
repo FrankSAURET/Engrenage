@@ -55,10 +55,22 @@
          </hbox>
          <separator/>
          <hbox>
-            <param name="hole_width" type="float" min="0.1" max="100" precision="3" gui-text="Largeur du trou rectangulaire (dimension horizontale): ">2.9</param>
-         </hbox>
-         <hbox>
-            <param name="hole_length" type="float" min="0.1" max="100" precision="3" gui-text="Hauteur du trou rectangulaire (dimension Verticale) : ">2.9</param>
+            <vbox>
+               <hbox>
+                  <param name="hole_width" type="float" min="0.1" max="100" precision="3" gui-text="Largeur du trou rectangulaire (dimension horizontale): ">2.9</param>
+               </hbox>
+               <hbox>
+                  <param name="hole_length" type="float" min="0.1" max="100" precision="3" gui-text="Hauteur du trou rectangulaire (dimension Verticale) : ">2.9</param>
+               </hbox>
+            </vbox>
+            <separator/>
+            <vbox>
+               <spacer/> <param name="CarreParfait" type="bool" gui-text="Carré parfait." >true</param>
+               <label>Dessine un carré correspondant à l'épaisseur du matériaux et au jeu de l'onglet Matériel et matériau .
+               </label>
+               <param name="BarreAxe" type="bool" gui-text="Dessiner la barre d'axe">true</param>
+               <hbox><param name="LongueurAxe" type="float" min="0.1" max="100" precision="1" gui-text="Longueur de la barre d'axe">6</param></hbox>
+            </vbox>   
          </hbox>
          <separator/>
          <hbox>
