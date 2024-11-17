@@ -55,7 +55,7 @@ two_pi = 2 * np.pi
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '2024.2'
+__version__ = '2024.3'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
