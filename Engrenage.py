@@ -20,36 +20,30 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-- 2024-11-09 | 2024.3 : 
-    - Ajout de la possibilité de définir les trous de fixation en fonction de l'épaisseur du matériau.
-    - Possibilité de faire un trou qui correspond à l'épaisseur du matériau.
-    - Ajout du dessin de l'axe si on choisit l'option carré parfait.
-- 2024-11-06 | 2024.2 : La roue de fixation pour les servomoteurs est maintenant paramétrable. 
-- 2024-10-25 | 2024.1 : Ajout du tracé de roue de fixation pour les servomoteurs. Changement de versionnage. Flancs pour roue de type T.
-- 2024-07-20 | 1.4 : Ajout du tracé de poulie au pas métrique. Retouche des explications. Ajout de schémas.
-- 2024-06-22 | 1.3 : Ajout de couleurs pour l'ordre de découpe. Séparation en plusieurs objet pour faciliter la retouche et la recolorisation.
-- 2024-06-18 | 1.2 : Ajout de la possibilité de choisir la forme du trou (rectangulaire, ronde ou empreinte de servo) et de choisir les dimensions du trou. Ajout de la possibilité de choisir une empreinte pour le trou du servo. Les empreintes sont placées dans le fichier engrenage.ini
-- 2024-04-21 | 1.1 : traduction en français. Modification de la couleur en cas d'undercut. Modification du deddendum pour qu'il fasse 1,25 fois l'addendum.
-^^ Frank SAURET ^^
-2020-7-4   spadino 1.0 ported to inkscape 1.0
-2015-05-29 juewei 0.9 	ported to inkscape 0.91
-			AttributeError: 'module' object inkex has no attribute 'uutounit
-			Fixed https://github.com/jnweiger/inkscape-gears-dev
+2014-03-20 jw@suse.de 0.2  Option --accuracy=0 for automatic added.
+2014-03-21                 sent upstream: https://bugs.launchpad.net/inkscape/+bug/1295641
+2014-03-21 jw@suse.de 0.3  Fixed center of rotation for gears with odd number of teeth.
+2014-04-04 juewei     0.7  Revamped calc_unit_factor(). 
+2014-04-05 juewei    0.7a  Correctly positioned rack gear.
+                       The geometry above the meshing line is wrong.
+2014-04-06 juewei    0.7b  Undercut detection added. Reference:
+               http://nptel.ac.in/courses/IIT-MADRAS/Machine_Design_II/pdf/2_2.pdf
+               Manually merged https://github.com/jnweiger/inkscape-gears-dev/pull/15
+2014-04-07 juewei    0.7c  Manually merged https://github.com/jnweiger/inkscape-gears-dev/pull/17
 2014-04-09 juewei    0.8   Fixed https://github.com/jnweiger/inkscape-gears-dev/issues/19
 			   Ring gears are ready for production now. Thanks neon22 for driving this.
 			   Profile shift implemented (Advanced Tab), fixing 
 			   https://github.com/jnweiger/inkscape-gears-dev/issues/9
-2014-04-07 juewei    0.7c  Manually merged https://github.com/jnweiger/inkscape-gears-dev/pull/17
-2014-04-06 juewei    0.7b  Undercut detection added. Reference:
-               http://nptel.ac.in/courses/IIT-MADRAS/Machine_Design_II/pdf/2_2.pdf
-               Manually merged https://github.com/jnweiger/inkscape-gears-dev/pull/15
-2014-04-05 juewei    0.7a  Correctly positioned rack gear.
-                       The geometry above the meshing line is wrong.
-2014-04-04 juewei     0.7  Revamped calc_unit_factor(). 
-2014-03-21 jw@suse.de 0.3  Fixed center of rotation for gears with odd number of teeth.
-2014-03-21                 sent upstream: https://bugs.launchpad.net/inkscape/+bug/1295641
-2014-03-20 jw@suse.de 0.2  Option --accuracy=0 for automatic added.
-
+2015-05-29 juewei 0.9 	ported to inkscape 0.91
+			AttributeError: 'module' object inkex has no attribute 'uutounit
+			Fixed https://github.com/jnweiger/inkscape-gears-dev
+2020-7-4   spadino 1.0 ported to inkscape 1.0
+2024-04-21 Frank sauret 1.1 : traduction en français. Modification de la couleur en cas d'undercut. Modification du deddendum pour qu'il fasse 1.25 fois l'addendum.
+2024-06-18 Frank sauret 1.2 : Ajout de la possibilité de choisir la forme du trou (rectangulaire, ronde ou empreinte de servo) et de choisir les dimensions du trou. Ajout de la possibilité de choisir une empreinte pour le trou du servo. Les empreintes sont placées dans le fichier engrenage.ini
+2024-06-22 Frank sauret 1.3 : Ajout de couleurs pour l'ordre de découpe. Séparation en plusieurs objet pour faciliter la retouche et la recolorisation.
+2024-07-20 Frank sauret 1.4 : Ajout du tracé de poulie au pas métrique
+2024-10-25 Frank sauret 2024.1 : Ajout du tracé de roue de fixation pour les servomoteurs. Changement de versionnage
+2024-11-06 Frank sauret 2024.2 : La roue de fixation pour les servomoteurs est maintenant paramétrable. 
 '''
 
 import inkex
@@ -61,7 +55,7 @@ two_pi = 2 * np.pi
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '2024.3'
+__version__ = '2024.2'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
