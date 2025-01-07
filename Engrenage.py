@@ -44,6 +44,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 2024-07-20 Frank sauret 1.4 : Ajout du tracé de poulie au pas métrique
 2024-10-25 Frank sauret 2024.1 : Ajout du tracé de roue de fixation pour les servomoteurs. Changement de versionnage
 2024-11-06 Frank sauret 2024.2 : La roue de fixation pour les servomoteurs est maintenant paramétrable. 
+2025-01-07 Frank sauret 2024.3.1 : Ajout de l'empreinte pour le servo FS90
 '''
 
 import inkex
@@ -55,7 +56,7 @@ two_pi = 2 * np.pi
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '2024.3'
+__version__ = '2024.31'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
