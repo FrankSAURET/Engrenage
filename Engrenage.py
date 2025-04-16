@@ -44,7 +44,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 2024-07-20 Frank sauret 1.4 : Ajout du tracé de poulie au pas métrique
 2024-10-25 Frank sauret 2024.1 : Ajout du tracé de roue de fixation pour les servomoteurs. Changement de versionnage
 2024-11-06 Frank sauret 2024.2 : La roue de fixation pour les servomoteurs est maintenant paramétrable. 
-2025-01-07 Frank sauret 2024.3.1 : Ajout de l'empreinte pour le servo FS90
+2025-04-16 Frank Sauret 2025.14 : Ajout d'empreintes de servo. Correction d'un bug pour le "carré parfait".
 '''
 
 import inkex
@@ -56,7 +56,7 @@ two_pi = 2 * np.pi
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '2024.31'
+__version__ = '2025.1'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
@@ -714,10 +714,10 @@ class Gears(inkex.EffectExtension):
             
         bbox_points = list(points_to_bbox(points))
         
-        if self.options.CarreParfait and self.options.BarreAxe:
+        if self.options.CarreParfait and self.options.BarreAxe and shape=="Rectangulaire":
             # trace l'axe
-            xAxe=DiametreCercle/2+2
-            yAxe=-DiametreCercle/2
+            xAxe=outer_radius
+            yAxe=-outer_radius
             LargeurAxe=epaisseur_matos+kerf
             draw_SVG_rect(g,xAxe,yAxe,LargeurAxe,self.options.LongueurAxe,'RectFixationDroit',styles['pathRect'])
             bbox_points[2] = bbox_points[2] + LargeurAxe

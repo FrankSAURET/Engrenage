@@ -1,12 +1,13 @@
 # Engrenage
 -----
-Version 2024.31
-For inkscape V 1.x
+Version 2025.1
+For inkscape V 1.3 +
 -----
 Gears extension for tracing involute gears and metric pitch gears (belt pulley); allows spokes, center cross, metric module, best evolute shape.
 
 Initially, copy of inkscape-gears-dev (https://github.com/jnweiger/inkscape-gears-dev).
 
+- 2025-04-16 | 2025.1 : Ajout d'empreintes de servo. Correction d'un bug pour le "carré parfait".
 - 2025-01-07 | 2024.3.1 : Ajout de l'empreinte pour le servo FS90
 - 2024-11-09 | 2024.3 : 
     - Ajout de la possibilité de définir les trous de fixation en fonction de l'épaisseur du matériau.
