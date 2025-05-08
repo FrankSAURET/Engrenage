@@ -1,12 +1,13 @@
 # Engrenage
 -----
-Version 2025.1
+Version 2025.2
 For inkscape V 1.3 +
 -----
 Gears extension for tracing involute gears and metric pitch gears (belt pulley); allows spokes, center cross, metric module, best evolute shape.
 
 Initially, copy of inkscape-gears-dev (https://github.com/jnweiger/inkscape-gears-dev).
 
+- 2025-05-09 | 2025.2 : Suppression du choix de l'unité. Maintenant c'est le mm et les anglosaxons n'ont qu'à se rappeller qu'ils ont signé la convention du mètre ;).
 - 2025-04-16 | 2025.1 : Ajout d'empreintes de servo. Correction d'un bug pour le "carré parfait".
 - 2025-01-07 | 2024.3.1 : Ajout de l'empreinte pour le servo FS90
 - 2024-11-09 | 2024.3 : 
@@ -22,7 +23,7 @@ Initially, copy of inkscape-gears-dev (https://github.com/jnweiger/inkscape-gear
 
 Usage
 -----
-Copy the .inx, .py, svg, png and ini files in to your Inkscape extensions directory (usually on windows C:\Users\username\AppData\Roaming\inkscape\extensions or %appdata%\inkscape\extensions). 
+Copy the .inx, .py, svg, png, ini files and locale folder in your Inkscape extensions directory (usually on windows C:\Users\username\AppData\Roaming\inkscape\extensions or %appdata%\inkscape\extensions). 
 The actual directory can be found under Preferences/System.
 
 ini file can be modified to add hole shape. If you do this, you must add the name in the dropdown list into the inx file (under 62 line). The name in value attrib must be the same in the ini file (name between []).
@@ -31,6 +32,6 @@ Restart inkscape.
 
 The extension will be available under "Extensions > Formes > Engrenage...".
 
-It can be update with **extensions > Mise à jour des extensions de Frank SAURET...** extension.
+It can be update with **extensions > Update of Frank SAURET's extensions...** extension.
 
 All code is offered under Licence : GPLV2.
