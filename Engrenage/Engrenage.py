@@ -54,10 +54,20 @@ from math import pi, cos, sin, tan, radians, degrees, ceil, asin, acos, sqrt, hy
 from configparser import ConfigParser
 import numpy as np
 two_pi = 2 * np.pi
+
 import locale
 locale.setlocale(locale.LC_ALL, '')
 
-__version__ = '2025.2'
+# Extraction dynamique de la version depuis Info.json
+import json
+import os
+info_path = os.path.join(os.path.dirname(__file__), 'Info.json')
+try:
+    with open(info_path, 'r', encoding='utf-8') as f:
+        info = json.load(f)
+        __version__ = info.get('version', 'unknown')
+except Exception:
+    __version__ = 'unknown'
 
 def uutounit(self,nn,uu):
     return self.svg.uutounit(nn,uu)
